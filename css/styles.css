@@ -1,0 +1,635 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap");
+
+* {
+  /* Estilos en cero para arrancar */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*----------------------------------------------------------------------------- generales------------------------------------------------------------------ */
+body {
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%; /* práctica común para asegurarse de que las imágenes se comporten de 
+manera responsiva y se ajusten adecuadamente 
+a los diferentes tamaños de contenedor y pantallas, */
+}
+
+p {
+  font-size: 1.125rem;
+  font-family: "Barlow", sans-serif;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-family: "Fraunces", serif;
+  font-weight: 800;
+  font-size: 4rem;
+  margin-top: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-family: "Fraunces", serif;
+  font-size: 3.5rem;
+}
+h3 {
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  color: rgb(145, 142, 142);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+button {
+  border-radius: 35px;
+  padding: 12px 30px;
+  border: none;
+  font-weight: bold;
+}
+
+#button__nav-a {
+  color: rgb(0, 0, 0);
+}
+
+.button__a {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+button:active {
+  border-radius: 25px;
+  padding: 12px 30px;
+  background-color: hsl(198, 90%, 71%);
+  border: none;
+}
+
+#button__nav-a {
+  color: black;
+}
+
+/*-----------------------------------------------------------------------------NAV------------------------------------------------------------------ */
+/* Nav */
+.nav__responsive-ul {
+  display: none;
+}
+.nav {
+  background-color: #3ebfff;
+  border: none;
+}
+
+.nav__container {
+  /*  background-color: #3ebfff; */
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+
+.nav__img-logo {
+  margin: 30px;
+}
+
+.nav__li {
+  display: inline-block;
+  padding: 20px;
+  color: white;
+}
+
+.nav__li a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav__li:hover a {
+  color: #3ebfff;
+}
+
+.nav__responsive-button {
+  float: right;
+  padding: 14px 20px;
+}
+
+.nav__responsive-button-container {
+  display: none;
+}
+
+/*-----------------------------------------------------------------------------Banner------------------------------------------------------------------ */
+
+.banner {
+  display: flex;
+  justify-content: center;
+}
+
+.container__img_banner {
+  display: flex;
+  background-image: url("../images/desktop/image-header.jpg");
+  background-size: cover; /* Utiliza contain en lugar de cover */
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  padding-top: 55%; /* Establece la altura máxima */
+  object-fit: cover;
+}
+
+/* title and arrow*/
+.container__title-banner {
+  position: absolute; /* hace que la flecha se ponga encima del texto sin
+  importar su pocision*/
+}
+
+.container__arrow-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 210px;
+}
+
+.text-f-c {
+  line-height: 1.8;
+}
+
+.link-c {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bolder;
+}
+
+.link-underline-red:hover {
+  text-decoration: underline; /* Agrega un subrayado en hover */
+  text-decoration-color: red;
+}
+
+.link-underline-yellow:hover {
+  text-decoration: underline; /* Agrega un subrayado en hover */
+  text-decoration-color: yellow;
+}
+
+/* COMENTARIO DE DISSPLAY 
+
++-- display: flex;
+Esta propiedad se aplica al elemento contenedor y establece que su contenido debe ser presentado como un modelo de caja flexible.
+
++--flex-direction: row|row-reverse|column|column-reverse;
+
+--row (valor predeterminado): Los elementos se colocan en filas de izquierda a derecha.
+--row-reverse: Los elementos se colocan en filas de derecha a izquierda.
+--column: Los elementos se colocan en columnas de arriba a abajo.
+--column-reverse: Los elementos se colocan en columnas de abajo a arriba.
+
++--justify-content: flex-start|flex-end|center|space-between|space-around;
+
+--flex-start (valor predeterminado): Los elementos se alinean al principio del contenedor.
+--flex-end: Los elementos se alinean al final del contenedor.
+--center: Los elementos se alinean en el centro del contenedor.
+--space-between: Los elementos se distribuyen uniformemente a lo largo del contenedor con espacio entre ellos.
+--space-around: Los elementos se distribuyen uniformemente a lo largo del contenedor con espacio alrededor de ellos.
+
++--align-items: flex-start|flex-end|center|baseline|stretch;
+
+--flex-start (valor predeterminado): Los elementos se alinean al principio del eje cruzado.
+--flex-end: Los elementos se alinean al final del eje cruzado.
+--center: Los elementos se alinean en el centro del eje cruzado.
+--baseline: Los elementos se alinean según su línea base.
+--stretch: Los elementos se estiran para llenar todo el espacio del eje cruzado.
+
++--align-content: flex-start|flex-end|center|space-between|space-around|stretch;
+
+--Esta propiedad controla el espaciado entre las líneas de elementos en el contenedor cuando hay múltiples filas o columnas.
+--Las opciones son similares a las de justify-content y align-items.
+
++--flex-wrap: nowrap|wrap|wrap-reverse;
+
+--nowrap (valor predeterminado): Los elementos no se envuelven y se ajustan en una sola línea.
+--wrap: Los elementos se envuelven en múltiples líneas si es necesario.
+--wrap-reverse: Los elementos se envuelven en múltiples líneas en sentido inverso.
+
+
+Z-INDEX ---> EL QUE TENGA EL VALOR MAS GRANDE VA A ESTAR POR ENCIMA
+EN DISPLAU FLEX SE USA ORDER 
+EL VALOR MAS ALTO ES LA CAJA MAS GRANDE 
+*/
+
+/* --------------------------------------------------------- */
+
+/* first container */
+.first__container,
+.second__container,
+.third__container,
+.fifth__container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* --------------------------------------------------------- */ /* CUARTO CONTENEDOR */ /* --------------------------------------------------------- */
+
+.fourth__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+}
+
+.fourth__container-user {
+  display: flex;
+  margin: 40px 50px;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.fourth__container-user-one,
+.fourth__container-user-two,
+.fourth__container-user-three {
+  padding: 40px 20px 60px 20px;
+  /*  background-color: #3ebfff; */
+  width: 300px;
+  flex: 1;
+}
+
+.fourth__text-one,
+.fourth__text-two,
+.fourth__text-three {
+  margin-top: 30px;
+  /*   background-color: #ef36a8; */
+  height: 300px;
+  position: relative;
+}
+
+.user-text {
+  line-height: 1.5;
+  font-size: 16px;
+  color: rgb(83, 83, 83);
+}
+
+.user-name {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-top: 40px;
+  color: black;
+}
+
+.user-career {
+  color: rgb(108, 107, 107);
+  margin-top: 10px;
+}
+
+/* .container-name-carrer {
+  position: absolute;
+  bottom: 1;
+}
+ */
+.img__client {
+  border-radius: 50% 50%;
+  width: 40%;
+}
+
+/* --------------------------------------------------------- */ /* CONTENEDORES --------------------------------------------------------- */
+
+.first__container-left,
+.second__container-left,
+.third__container-left {
+  /*   background-color: red; */
+  /* display: flex; */
+  width: 50%;
+}
+
+.first__container-right,
+.second__container-right,
+.third__container-right {
+  display: flex;
+  /*   background-color: rgb(136, 255, 0); */
+  width: 50%;
+}
+
+.third__container-left-text {
+  align-content: center;
+  margin-top: 300px;
+}
+
+.first__container-left-text,
+.second__container-left-text {
+  /*  background-color: #c16fe7; */
+  padding: 100px 50px;
+}
+
+.container-text {
+  /*   background-color: #3ebfff; */
+  position: absolute;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 270px;
+  margin-left: 70px;
+}
+
+.third__container-right,
+.third__container-left {
+  position: relative;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(38, 26, 42); /* Color del texto */
+  padding: 350px 180px 100px 180px;
+}
+
+.title-gp-ph {
+  font-size: 2rem;
+}
+
+.text-gp-ph {
+  margin-top: 25px;
+}
+/* -------------------------------------------------------------------  FOOTEER- ----------------------------------------------------------------- */
+
+footer {
+  background-color: hsl(168, 54%, 67%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__logo__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.container__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.footer__list-item a {
+  color: #2c7566;
+  text-decoration: none;
+  padding: 0px 40px;
+}
+
+.footer__list-item a:hover {
+  color: #ffffff;
+}
+
+img .social__footer:hover {
+  fill: #ffffff;
+}
+
+.social__footer-item {
+  padding: 15px;
+}
+
+/* -----------------------------------------------------------------  RESPONSIVE --------------------------------------------------------- */
+
+/* Responsive nav */
+@media only screen and (max-width: 420px) {
+  .nav__ul {
+    display: none;
+  }
+
+  .nav__responsive-ul {
+    display: block;
+    list-style: none;
+    position: absolute;
+    width: 90%;
+    margin-top: 100px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  .nav__li-container {
+    background-color: white;
+    padding-top: 40px;
+  }
+
+  .nav__responsive-li a {
+    text-decoration: none;
+    color: rgb(158, 156, 156);
+    line-height: 45px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  /*  Use un id en este caso para que tenga mas esepcificidad que el nav de arriba*/
+  #boton_contact_nav {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .nav__responsive-li {
+    padding: 9px 20px;
+  }
+
+  .nav__responsive-button-container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    color: rgb(184, 213, 244);
+    margin-top: 15px;
+  }
+
+  button {
+    background-color: hsl(53, 100%, 50%);
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .container__img_banner {
+    background-image: url(../images/mobile/image-header.jpg);
+    padding-bottom: 290px;
+  }
+
+  .first__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .second__container,
+  .third__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fifth__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .fifth__container-item {
+    width: 50%;
+  }
+  .first__container-left,
+  .second__container-left,
+  .third__container-left {
+    /*     background-color: red; */
+    width: 100%;
+  }
+
+  .first__container-right,
+  .second__container-right,
+  .third__container-right {
+    /*     background-color: rgb(136, 255, 0); */
+    width: 100%;
+  }
+
+  .fourth__container-user {
+    flex-direction: column;
+  }
+
+  .fourth__container-user-one,
+  .fourth__container-user-two,
+  .fourth__container-user-three {
+    padding: 10px 10px;
+  }
+
+  .fourth__text-one,
+  .fourth__text-two,
+  .fourth__text-three {
+    height: 230px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .container__logo__footer {
+    margin-top: 40px;
+  }
+
+  .container__arrow-banner {
+    margin-top: 80px;
+  }
+}
+
+/* Title responsive */
+
+/*-------------------------------------------------------------------------------------------- tablet -----------------------------------------------------------*/
+
+@media only screen and (max-width: 769px) {
+  h1 {
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    margin-top: 50px;
+  }
+
+  .title-first {
+    font-size: 1.8rem;
+  }
+
+  .first__container-right,
+  .second__container-right,
+  .third__container-right {
+    /*  background-color: rgb(225, 154, 10); */
+    height: 50%;
+  }
+
+  .first__container-left,
+  .second__container-left,
+  .third__container-leftt {
+    /*   background-color: rgb(32, 222, 244); */
+    height: 50%;
+  }
+
+  .first__container-left-text,
+  .second__container-left-text {
+    padding: 39px;
+  }
+
+  .text-f-c {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .link-c {
+    margin-top: 37px;
+  }
+  .container__arrow-banner {
+    margin-top: 30px;
+  }
+
+  .image-overlay {
+    padding: 250px 20px 100px 20px;
+  }
+
+  .title-gp-ph {
+    font-size: 1.5rem;
+  }
+
+  .text-gp-ph {
+    margin-top: 15px;
+    padding-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .container__arrow-banner {
+    margin-top: 70px;
+  }
+
+  .image-overlay {
+    padding: 250px 40px 100px 40px;
+  }
+
+  .title-gp-ph {
+    font-size: 1.5rem;
+  }
+
+  .text-gp-ph {
+    margin-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .title-first {
+    font-size: 1.7rem;
+  }
+
+  .text-f-c {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .link-c {
+    margin-top: 30px;
+  }
+
+  .first__container-left-text,
+  .second__container-left-text {
+    padding: 19px 90px;
+  }
+}

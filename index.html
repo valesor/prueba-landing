@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <script src="https://kit.fontawesome.com/8d9bc456af.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <header>
+
+    <nav class="nav">
+      <div class="nav__container">
+        <div class="nav__img-logo"><img src="images/logo.svg" alt=""></div>
+        <ul class="nav__ul">
+          <li class="nav__li"><a href="#"> About</a></li>
+          <li class="nav__li"><a href="#"> Services</a></li>
+          <li class="nav__li"><a href="#">Projects</a></li>
+          <li class="nav__li"><button><a href="#" class="button__a" id="button__nav-a"> Contact</a></button></li>
+
+        </ul>
+        <div class="nav__responsive-button-container">
+          <div> <img class="nav__responsive-button" id="responsive-button" src="images/icon-hamburger.svg" alt="">
+          </div>
+        </div>
+        <ul class="nav__responsive-ul">
+          <div class="nav__li-container"> <!-- Identar codigo (meto li en un div) -->
+            <li class="nav__responsive-li"><a href="#"> About</a></li>
+            <li class="nav__responsive-li"><a href="#"> Services</a></li>
+            <li class="nav__responsive-li"><a href="#">Projects</a></li>
+            <li class="nav__responsive-li"><button><a id="boton_contact_nav" href="#" class="button__responsive">
+                  Contact</a></button></li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="banner">
+    <div class="container__title-banner">
+      <h1>We are creatives</h1>
+      <div class="container__arrow-banner">
+        <img src="images/icon-arrow-down.svg" alt="">
+      </div>
+    </div>
+    <div class="container__img_banner"></div>
+  </section>
+
+  <!-- FISRST SECTION -->
+  <section class="first">
+
+    <div class="first__container">
+      <div class="first__container-left  first__container-left-text">
+        <h2 class="title-first"> Transform your brand</h2>
+        <p class="text-f-c">
+          We are a full-service creative agency specializing in helping brands grow fast.
+          Engage your clients through compelling visuals that do most of the marketing for you.
+        </p>
+        <a class="link-c link-underline-yellow" href="#">Learn more</a>
+      </div>
+      <div class="first__container-right"><img src="images/desktop/image-transform.jpg" alt=""></div>
+    </div>
+  </section>
+  <section class="second">
+    <div class="second__container">
+      <div class="second__container-left"><img src="images/desktop/image-stand-out.jpg" alt=""></div>
+      <div class="second__container-left second__container-left-text">
+        <h2 class="title-first">Stand out to the right audience</h2>
+        <p class="text-f-c"> Using a collaborative formula of designers, researchers, photographers, videographers, and
+          copywriters,
+          we’ll
+          build
+          and extend your brand in digital places. </p>
+        <a class="link-c link-underline-red" href="#">Learn more</a>
+      </div>
+    </div>
+  </section>
+  <section class="third">
+
+    <div class="third__container">
+
+      <div class="third__container-left">
+
+        <img src="images/desktop/image-graphic-design.jpg" alt="">
+        <div class="image-overlay">
+          <h2 class="title-gp-ph">Graphic design</h2>
+          <p class="text-gp-ph">Great design makes you memorable. We deliver artwork that underscores your brand message
+            and captures
+            potential
+            clients’ attention.</p>
+        </div>
+      </div>
+      <div class="third__container-right">
+
+        <img src="images/desktop/image-photography.jpg" alt="">
+        <div class="image-overlay">
+          <h2 class="title-gp-ph"> Photography</h2>
+          <p class="text-gp-ph"> Increase your credibility by getting the most stunning, high-quality photos that
+            improve your business
+            image.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="fourth">
+    <div class="fourth__container">
+      <h3 class="title-client">Client testimonials</h3>
+    </div>
+
+    <div class="fourth__container-user">
+      <div class="fourth__container-user-one">
+        <div><img class="img__client" src="images/image-emily.jpg" alt=""></div>
+        <div class="fourth__text-one">
+          <p class="user-text">We put our trust in Sunnyside and they delivered, making sure our needs were met and
+            deadlines were always
+            hit.</p>
+          <div class="container-name-carrer">
+            <h5 class="user-name">Emily R.</h5>
+            <p class="user-career"> Marketing Director</p>
+          </div>
+        </div>
+      </div>
+      <div class="fourth__container-user-two">
+        <div><img class="img__client" src="images/image-thomas.jpg" alt=""></div>
+        <div class="fourth__text-two">
+          <p class="user-text"> Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a
+            satisfying and
+            enjoyable
+            experience.</p>
+          <div class="container-name-carrer">
+            <h5 class="user-name"> Thomas S.</h5>
+            <p class="user-career"> Chief Operating Officer</p>
+          </div>
+        </div>
+      </div>
+      <div class="fourth__container-user-three">
+        <div><img class="img__client" src="images/image-jennie.jpg" alt=""></div>
+        <div class="fourth__text-three">
+          <p class="user-text"> Incredible end result! Our sales increased over 400% when we worked with Sunnyside.
+            Highly recommended!
+          <div class="container-name-carrer">
+            <h5 class="user-name"> Jennie F.</h5>
+            <p class="user-career">Business Owner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="fifth">
+    <div class="fifth__container">
+      <div class="fifth__container-item"><img src="images/desktop/image-gallery-milkbottles.jpg" alt=""></div>
+      <div class="fifth__container-item"><img src="images/desktop/image-gallery-orange.jpg" alt=""></div>
+      <div class="fifth__container-item"> <img src="images/desktop/image-gallery-cone.jpg" alt=""></div>
+      <div class="fifth__container-item"><img src="images/desktop/image-gallery-sugarcubes.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer__container">
+      <div class="container__logo__footer"><img class="logo__footer" src="images/logo-footer.png" alt=""></div>
+      <ul class="footer__list">
+        <li class="footer__list-item"><a href="#">About</a> </li>
+        <li class="footer__list-item"> <a href="#">Services</a> </li>
+        <li class="footer__list-item"> <a href="#">Projects</a></li>
+      </ul>
+      <div class="container__social">
+        <img class="social__footer-item" src="images/icon-facebook.svg" alt="">
+        <img class="social__footer-item" src="images/icon-instagram.svg" alt="">
+        <img class="social__footer-item" src="images/icon-twitter.svg" alt="">
+        <img class="social__footer-item" src="images/icon-pinterest.svg" alt="">
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
